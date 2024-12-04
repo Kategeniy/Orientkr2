@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Размен денежной суммы</title>
+    <script src="dop_sol.js" defer></script> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input[type="number"], button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #result {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 align="center">Спортивное ориентирование в Орле</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">О спорте</a></li>
+                <li><a href="events.html">События</a></li>
+                <li><a href="techniques.html">Техники</a></li
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="contact.html">Заявка на вступление</a></li>
+                <li><a href="pas.html">Паспорт</a></li>
+                <li><a href="solution.html">Изменение на латиницу</a></li>
+                <li><a href="dop_sol.html">Доп. задача</a></li>
+                <li><a href="catalogue.html">Каталог</a></li>
+                <li><a href="trash.html">Заказ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<h1>Проверка размена денежной суммы</h1>
+
+<form id="currency-form" method="GET" action="https://www.bing.com/search">
+    <input type="hidden" name="q" value="search">
+    <div class="form-group">
+        <label for="amount">Введите сумму (в рублях): </label>
+        <input type="number" id="amount" name="amount" placeholder="Введите сумму в рублях" required>
+    </div>
+
+    <button type="button" onclick="checkAmount()">Проверить возможность размена</button>
+
+
+    <input type="hidden" id="result-status" name="result-status">
+
+    <p id="result" class="hidden"></p>
+
+    <hr>
+
+    <h2>Отправить данные на сервер</h2>
+    <button type="submit">Отправить на сервер</button>
+</form>
+
+</body>
+</html>
